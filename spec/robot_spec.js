@@ -1,3 +1,5 @@
+'use strict';
+
 var Robot = require('../robot');
 
 describe('Robot', function() {
@@ -10,14 +12,14 @@ describe('Robot', function() {
     expect(robot.battery()).toEqual(17);
   });
 
-  // it("can move up", function () {
-  //   var robot = new Robot(8);
-  //   robot.moveUp();
-  //   expect(robot.position()).toEqual([0, 1]);
-  //
-  //   robot.moveUp();
-  //   expect(robot.position()).toEqual([0, 2]);
-  // });
+  it("can move up", function () {
+    var robot = new Robot(8);
+    robot.moveUp();
+    expect(robot.position()).toEqual([0, 1]);
+
+    robot.moveUp();
+    expect(robot.position()).toEqual([0, 2]);
+  });
   //
   // it("can move left", function () {
   //   var robot = new Robot(8);
